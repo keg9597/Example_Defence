@@ -10,6 +10,7 @@ public class TowerController : MonoBehaviour
     public GameObject targetEnemy;
     public GameObject bulletPrefab;
     public GameObject muzzleEffect;
+    public Animator anim;
 
     public enum TOWERSTATE
     {
@@ -63,6 +64,9 @@ public class TowerController : MonoBehaviour
                 }
                 break;
             case TOWERSTATE.UPGRADING:
+                //Todo
+                //1. 업그레이드중에 애니메이션 재생
+                //2. 업그레이드중에 다른 행동 못하게 하기
                 break;
             case TOWERSTATE.NONE:
                 break;
