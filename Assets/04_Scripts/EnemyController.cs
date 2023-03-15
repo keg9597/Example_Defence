@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour
     public GameMgr gameMgr;
     private bool isDead = false;
     public GameObject deadEffect;
+    public Animator anim;
 
     void Start()
     {
@@ -50,7 +51,7 @@ public class EnemyController : MonoBehaviour
                 isDead = true;
                 gameMgr.killCnt++;
                 Instantiate(deadEffect,transform.position,transform.rotation);
-                GetComponentInChildren<HUDHpBar>().DestroyHpBar();
+                GetComponentInChildren<HUDHpBar>().DestroyHpBar();               
                 Destroy(gameObject);
             }
         }
